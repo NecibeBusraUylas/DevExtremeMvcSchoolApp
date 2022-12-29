@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>DevExtremeMvcSchoolApp</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    @* Uncomment to use the HtmlEditor control *@
+    @* <script src="https://unpkg.com/devextreme-quill@22_2/dist/dx-quill.min.js"></script> *@
+
+    @Styles.Render("~/Content/bundle")
+    @Styles.Render("~/Content/DevExtremeBundle")
+    @Scripts.Render("~/Scripts/bundle")
+    @Scripts.Render("~/Scripts/DevExtremeBundle")
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-md" style="width:auto;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/Students">Dev Express School Project</a>
+        </div>
+    </nav>
+
+    <div class="row">
+        <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-dark sidebar collapse" style="height:90vh; text-align:center">
+            <div class="position-sticky pt-3 sidebar-sticky">
+                <ul class="nav flex-column">
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <li class="nav-item"><a href="/Students" class="nav-link text-white">Students Page</a></li>
+                    <li class="nav-item"><a href="/Instructors" class="nav-link text-white">Instructors Page</a></li>
+                    <li class="nav-item"><a href="/Courses" class="nav-link text-white">Courses Page</a></li>
+                    <li class="nav-item"><a href="/CourseEnrollments" class="nav-link text-white">Course Enrollments Page</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4" style="padding-top:5px;">
+            @RenderBody()
+            @RenderSection("scripts", required: false)
+        </main>
+    </div>
+    <footer  class="bg-dark text-center text-white" style="width: auto; display: flex; flex-direction: row; justify-content: flex-end; align-items: flex-end; position: relative;" >
+        <div class="text-center p-3">
+            Design By
+            <a class="text-white" href="https://www.linkedin.com/in/necibebusrauylas/">Necibe Busra Uylas</a>
+            For Futurecom Bil. Hiz. ve Dan. A.S.
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,35 @@
+﻿@model DevExtremeMvcSchoolApp.Models.CourseEnrollment
+
+@{
+    ViewBag.Title = "Details";
+}
+<br />
+<h2>Student Course Enrollment Details</h2>
+<hr />
+<div>
+    <br />
+    <dl class="dl-horizontal">
+        <dt>
+            Course
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Course.Name)
+        </dd>
+        <br />
+        <dt>
+            Student
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Student.Name)
+            @Html.DisplayFor(model => model.Student.Surname)
+        </dd>
+
+    </dl>
+</div>
+<br />
+<button type="button" class="btn btn-outline-dark">@Html.ActionLink("Update", "Edit", new { id = Model.Id })</button>
+<br />
+<br />
+<button type="button" class="btn btn-outline-dark"> @Html.ActionLink("Back to Course Enrollment List", "Index")</button>

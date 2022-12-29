@@ -1,0 +1,34 @@
+﻿@model DevExtremeMvcSchoolApp.Models.Instructor
+
+@{
+    ViewBag.Title = "Details";
+}
+<br />
+<h2>Instructor Details</h2>
+<hr />
+<div>
+    <br />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.Surname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Surname)
+        </dd>
+
+    </dl>
+</div>
+<br />
+<button type="button" class="btn btn-outline-dark">@Html.ActionLink("Update", "Edit", new { id = Model.Id })</button>
+<br />
+<br />
+<button type="button" class="btn btn-outline-dark"> @Html.ActionLink("Back to Instructor Page", "Index")</button>

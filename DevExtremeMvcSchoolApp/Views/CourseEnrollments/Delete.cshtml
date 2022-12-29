@@ -1,0 +1,43 @@
+﻿@model DevExtremeMvcSchoolApp.Models.CourseEnrollment
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<br />
+<h2>Delete Course Enrollment</h2>
+<hr />
+<div>
+    <br />
+    <dl class="dl-horizontal">
+        <dt>
+            Course
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Course.Name)
+        </dd>
+        <br />
+        <dt>
+            Student
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Student.Name)
+            @Html.DisplayFor(model => model.Student.Surname)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div class="form-actions text-black fw-bold">
+            Are you sure you want to delete this?
+            &nbsp;
+            <input type="submit" value="Delete" class="btn btn-default" style="border:1px solid black; color:var(--bs-link-color); text-decoration:underline;" />
+        </div>
+        <br />
+        <button type="button" class="btn btn-outline-dark">@Html.ActionLink("Back to Course Enrollment Page", "Index")</button>
+    }
+</div>
